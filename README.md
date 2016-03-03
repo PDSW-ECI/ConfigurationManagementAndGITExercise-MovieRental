@@ -170,6 +170,8 @@ git rebase --continue
 
 ###Referencias adicionales:
 
-[No Changes - Did You Forget to Use ‘Git Add’?](http://wholemeal.co.nz/blog/2010/06/11/no-changes-did-you-forget-to-use-git-add/)
-[Git – rebasing – step by step](http://gitforteams.com/resources/rebasing.html)
-[Guía rápida GIT](http://rogerdudler.github.io/git-guide/)
+	[No Changes - Did You Forget to Use ‘Git Add’?](http://wholemeal.co.nz/blog/2010/06/11/no-changes-did-you-forget-to-use-git-add/)
+
+	[Git – rebasing – step by step](http://gitforteams.com/resources/rebasing.html)
+
+	[Guía rápida GIT](http://rogerdudler.github.io/git-guide/)
