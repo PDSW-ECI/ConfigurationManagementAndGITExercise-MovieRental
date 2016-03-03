@@ -6,7 +6,7 @@ Administración de la configuración – Control de versiones con GIT
 
 1. Descargue y descomprima el proyecto suministrado (ProyectoBase.zip).
 2. Cree una cuenta (para cada integrante del grupo) en GitHUB. En una de las dos cuentas, cree un nuevo repositorio. Invite al usuario de su compañero como colaborador de dicho proyecto.
-3. En el directorio raíz del proyecto, crear un archivo .gitignore, en el cual se especifique que el directorio ‘target’ no hará parte del control de versiones (agregue a dicho archivo una línea con: ./target ).
+3. En el directorio raíz del proyecto, crear un archivo .gitignore, en el cual se especifique que el directorio ‘target’ no hará parte del control de versiones (agregue a dicho archivo una línea con: target ).
 4. Cree un repositorio local para dicho proyecto, con:
 git init .
 5. Agregue todos los elementos actuales dentro del repositorio con:
