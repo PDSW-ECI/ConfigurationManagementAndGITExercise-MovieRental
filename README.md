@@ -166,3 +166,10 @@ git rebase --continue
 		$ git config --global user.email johndoe@example.com
 	```
 	2. Subir en el espacio de moodle un archivo de texto que tenga los integrantes, qué rol se asignó a cada uno (desarrollador 1/ desarrollador 2) y la URL del repositorio en GitHUB.
+
+
+###Referencias adicionales:
+
+[No Changes - Did You Forget to Use ‘Git Add’?](http://wholemeal.co.nz/blog/2010/06/11/no-changes-did-you-forget-to-use-git-add/)
+[Git – rebasing – step by step](http://gitforteams.com/resources/rebasing.html)
+[Guía rápida GIT](http://rogerdudler.github.io/git-guide/)
