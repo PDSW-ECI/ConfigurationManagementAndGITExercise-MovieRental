@@ -147,7 +147,7 @@ git rebase --continue
 
 12. (Para el Jueves) Implementar la aplicación Web que permita registrar nuevos pacientes, y registrar consultas a para los mismos. Ambas funcionaliadades estarán en dos vistas difernetes (registroconsultas.xhtml, registropacientes.xhtml), de acuerdo con las siguientes especificaciones:
 	
-	1. Se debe completar la implementación de las pruebas, y hacer los ajuste necesarios en caso de encontrar un defecto en la implementación de 'ServiciosPacientesStub'.
+	1. Se debe completar la implementación de las pruebas, y hacer los ajustes necesarios en caso de encontrar un defecto en la implementación de 'ServiciosPacientesStub'.
 	2. La vista de 'registro de pacientes' debe (1) Mostrar los campos necesarios para registrar un nuevo paciente (y su correspondiente botón de registro), y (2) Mostrar el listado de pacientes existentes junto con un botón de 'registrar cita'. Al oprimirse el botón asociado a uno de los pacientes, se debe redirigir al usuario a la vista del 'registro de citas'.
 	3. La vista 'registro de citas', a partir del paciente seleccionado en la vista anterior, debe (1) Mostrar el listado de consultas realizado para el paciente, y (2) Permitir capturar los datos de una nueva consulta a dicho paciente.
 	4. Ambas vistas se basarán en el ManagedBean de sesión 'RegistroConsultaBean', el cual -a su vez- hace uso de los 'ServiciosPacientes'.
