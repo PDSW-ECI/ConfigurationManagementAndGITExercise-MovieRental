@@ -90,14 +90,14 @@ git push URL_REPOSITORIO master
 
 	__Autor 1:__
 	* En la clase de pruebas ConsultaTest defina las clases de equivalencia para las pruebal del método de registro de consultas a pacientes.
-	* Implementar una prueba para el registro de consultas.
+	* Implementar una prueba para el registro de una nueva entrada al foro.
 	* Commit
 	* Push a GitHub
 	
 	
 	__Autor 2:__
 
-	* En la clase de pruebas PacienteTest defina las clases de equivalencia para las pruebas del método de registro de pacientes.
+	* En la clase de pruebas EntradasForoTest defina las clases de equivalencia para las pruebas del método de registro de pacientes.
 	* Implementar una prueba para el registro de nuevos pacientes.
 	* Commit
 	* Push a GitHub
@@ -107,13 +107,13 @@ git push URL_REPOSITORIO master
 11. Ahora, los dos autores van a trabajar simultáneamente sobre el mismo método de un archivo:
 
 	__Autor 1:__
-	* En la interfaz ServiciosPacientes, Corrige la ortografía de la documentación del método registrarNuevoPaciente
+	* En la interfaz ServiciosForo, Corrige la ortografía de la documentación del método registrarNuevaEntradaForo
 	* Commit
 	* Push
 	
 	__Autor 2:__
 
-	* En la interfaz ServiciosPacientes, corrige la documentación de la sección '@Throws' ya que hace referencia a una excepción diferente a la que el método define que podría ser lanzada.
+	* En la interfaz ServiciosForo, corrige la documentación de la sección '@Throws' del método 'registrarNuevaEntradaForo', ya que hace referencia a una excepción diferente a la que el método define que podría ser lanzada.
 	* Commit
 	* Push
 
@@ -145,17 +145,17 @@ git rebase --continue
 
 	Y posteriormente, haga push a la nuevos cambios al repositorio de GitHUB con push. Al final, todos deben hacer un ‘pull’ para garantizar que estén trabajando sobre la última versión.
 
-12. (Para el Jueves) Implementar la aplicación Web que permita registrar nuevos pacientes, y registrar consultas a para los mismos. Ambas funcionaliadades estarán en dos vistas difernetes (registroconsultas.xhtml, registropacientes.xhtml), de acuerdo con las siguientes especificaciones:
+12. (Para el Jueves) Implementar la aplicación Web que permita agregar nuevas entradas al foro, y registrar respuestas para los mismos. Ambas funcionaliadades estarán en dos vistas difernetes (registroentradasforo.xhtml, registrorespuestaforo.xhtml), de acuerdo con las siguientes especificaciones (tenga en cuenta que, por ahora, la aplicación no maneja ningún esquema de autenticación):
 	
-	1. Se debe completar la implementación de las pruebas, y hacer los ajustes necesarios en caso de encontrar un defecto en la implementación de 'ServiciosPacientesStub'.
-	2. La vista de 'registro de pacientes' debe (1) Mostrar los campos necesarios para registrar un nuevo paciente (y su correspondiente botón de registro), y (2) Mostrar el listado de pacientes existentes junto con un botón de 'registrar cita'. Al oprimirse el botón asociado a uno de los pacientes, se debe redirigir al usuario a la vista del 'registro de citas'.
-	3. La vista 'registro de citas', a partir del paciente seleccionado en la vista anterior, debe (1) Mostrar el listado de consultas realizado para el paciente, y (2) Permitir capturar los datos de una nueva consulta a dicho paciente.
-	4. Ambas vistas se basarán en el ManagedBean de sesión 'RegistroConsultaBean', el cual -a su vez- hace uso de los 'ServiciosPacientes'.
+	1. Se debe completar la implementación de las pruebas, y hacer los ajustes necesarios en caso de encontrar un defecto en la implementación de 'ServiciosForoStub'.
+	2. La vista de 'registro de entradas foro' debe (1) mostrar el listado de los foros registrados hasta el momento (con la opción de selecciar de uno de éstos), y (2) debe mostrar los campos para poder registrar una nueva entrada al foro (con su respectivo botón de registro). Cuando se registre la nueva entrada de foro, se debería automáticamente mostrar la nueva enrada en la parte superior. 
+	3. Cuando se seleccione uno de los foros ya creados, se debe redirigir al usuario a la vista de 'registro de respuesta a foro'. En esta vista, dado la entrada de foro seleccionada, se debe (1) mostrar las respustas dadas hasta el momento, y (2), debe permtir registrar una nueva respuesta.	
+	4. Ambas vistas se basarán en el ManagedBean de sesión 'RegistroForosBean', el cual -a su vez- hace uso de los 'ServiciosForos'.
 	5. El desarrollo de ambas vistas debe quedar distribuido entre los dos desarrolladores de la siguiente manera:
 	
-		* Desarrollador 1: Vista registro paciente.
-		* Desarrollador 2: Vista registro consulta.
-		* Desarrollador 1 y 2: ManagedBean 'RegistroConsultaBean'.
+		* Desarrollador 1: Vista registro entrada foro.
+		* Desarrollador 2: Vista registro respuesta a foro.
+		* Desarrollador 1 y 2: ManagedBean 'RegistroForosBean'.
 
 	Nota. Para ver cómo navegar entre vistas con JSF revise [este enlace.](http://www.tutorialspoint.com/jsf/jsf_page_navigation.htm)
 	
