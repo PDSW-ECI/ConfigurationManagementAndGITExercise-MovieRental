@@ -151,7 +151,6 @@ git rebase --continue
 		* Registro cliente.
 		* Registro alquiler.
 		* Cálculo de multa de devolución.
-	2. a lo requerido para este caso (NO ESB, y hacer los ajustes necesarios en caso de encontrar un defecto en la implementación de 'ServiciosForoStub'.
 	2. La vista de 'registro de clientes' debe (1) mostrar el listado de los clientes registrados hasta el momento (con la opción de selecciar de uno de éstos), y (2) debe mostrar los campos para poder registrar un nuevo cliente (con su respectivo botón de registro). Cuando se registre un nuevo cliente, se debería automáticamente mostrar el nuevo cliente en la parte superior. 
 	3. Cuando se seleccione uno de los usuarios ya creados, se debe redirigir al usuario a la vista de 'registro de alquileres'. En esta vista, dado el cliente seleccionado, se debe (1) mostrar los items que no ha regresado, junto con el valor de la multa total asociada a los mismos a la fecha (fecha del sistema), y (2), debe permtir registrar un nuevo alquiler ingresando el código del ítem (asumiendo que éste se ingresará con un lector de código de barras), el número de días del alquiler, y mostrando el costo del alquiler antes de su confirmación.
 	4. Ambas vistas se basarán en el ManagedBean de sesión 'AlquilerItemsBean', el cual -a su vez- hace uso de los 'ServiciosAlquilerItems'.
