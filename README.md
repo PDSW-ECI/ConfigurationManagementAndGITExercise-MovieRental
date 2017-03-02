@@ -6,7 +6,7 @@ Administración de la configuración – Control de versiones con GIT
 
 1. Descargue y descomprima el proyecto suministrado (ProyectoBase.zip).
 2. Cree una cuenta (para cada integrante del grupo) en GitHUB. En una de las dos cuentas, cree un nuevo repositorio. Invite al usuario de su compañero como colaborador de dicho proyecto.
-3. En el directorio raíz del proyecto, crear un archivo .gitignore, en el cual se especifique que el directorio ‘target’ no hará parte del control de versiones (agregue a dicho archivo una línea con: target ).
+3. En el directorio raíz del proyecto, crear un archivo .gitignore (con un punto a la izquierda del nombre), en el cual se especifique que el directorio ‘target’ no hará parte del control de versiones (agregue a dicho archivo una línea con: target ).
 4. Cree un repositorio local para dicho proyecto, con:
 git init .
 5. Agregue todos los elementos actuales dentro del repositorio con:
@@ -89,16 +89,16 @@ git push URL_REPOSITORIO master
 10. De nuevo, en dos computadores diferentes:
 
 	__Autor 1:__
-	* En la clase de pruebas ComentariosTest defina las clases de equivalencia para las pruebal del método de registro de nuevas respuestas a foros.
-	* Implementar una prueba para el registro de una nueva entrada al foro.
+	* En la clase de pruebas ClientesTest defina -en comentarios- las clases de equivalencia para las pruebas del método de registro de nuevos clientes.
+	* Implementar una prueba de una de dichas clases de equivalencia.
 	* Commit
 	* Push a GitHub
 	
 	
 	__Autor 2:__
 
-	* En la clase de pruebas EntradasForoTest defina las clases de equivalencia para las pruebas del método de registro de nuevos foros.
-	* Implementar una prueba para el registro de nuevos foros.
+	* En la clase de pruebas AlquilerTest defina -en comentarios- las clases de equivalencia para las pruebas del método de registro nuevo alquiler.
+	* Implementar una prueba de una de dichas clases de equivalencia.
 	* Commit
 	* Push a GitHub
 
@@ -107,13 +107,13 @@ git push URL_REPOSITORIO master
 11. Ahora, los dos autores van a trabajar simultáneamente sobre el mismo método de un archivo:
 
 	__Autor 1:__
-	* En la interfaz ServiciosForo, Corrige la ortografía de la documentación del método registrarNuevaEntradaForo
+	* En la interfaz de Servicios, Corrige la ortografía de la documentación del método 'registrarAlquilerCliente'
 	* Commit
 	* Push
 	
 	__Autor 2:__
 
-	* En la interfaz ServiciosForo, corrige la documentación de la sección '@Throws' del método 'registrarNuevaEntradaForo', ya que hace referencia a una excepción diferente a la que el método define que podría ser lanzada.
+	* En la interfaz de Servicios, corrige la documentación de la sección '@Throws' de la documentación del método 'registrarAlquilerCliente', ya que hace referencia a una excepción diferente a la que el método define que podría ser lanzada.
 	* Commit
 	* Push
 
@@ -145,17 +145,21 @@ git rebase --continue
 
 	Y posteriormente, haga push a la nuevos cambios al repositorio de GitHUB con push. Al final, todos deben hacer un ‘pull’ para garantizar que estén trabajando sobre la última versión.
 
-12. (Para el Jueves) Implementar la aplicación Web que permita agregar nuevas entradas al foro, y registrar respuestas para los mismos. Ambas funcionaliadades estarán en dos vistas difernetes (registroentradasforo.xhtml, registrorespuestaforo.xhtml), de acuerdo con las siguientes especificaciones (tenga en cuenta que, por ahora, la aplicación no maneja ningún esquema de autenticación):
+12. (Para el Jueves) Implementar la aplicación Web que permita agregar nuevos clientes a la videotienda, y registrar alquileres para los mismos. Ambas funcionaliadades estarán en dos vistas difernetes (registroentradasforo.xhtml, registrorespuestaforo.xhtml), de acuerdo con las siguientes especificaciones (tenga en cuenta que, por ahora, la aplicación no maneja ningún esquema de autenticación):
 	
-	1. Se debe completar la implementación de las pruebas, y hacer los ajustes necesarios en caso de encontrar un defecto en la implementación de 'ServiciosForoStub'.
-	2. La vista de 'registro de entradas foro' debe (1) mostrar el listado de los foros registrados hasta el momento (con la opción de selecciar de uno de éstos), y (2) debe mostrar los campos para poder registrar una nueva entrada al foro (con su respectivo botón de registro). Cuando se registre la nueva entrada de foro, se debería automáticamente mostrar la nueva enrada en la parte superior. 
-	3. Cuando se seleccione uno de los foros ya creados, se debe redirigir al usuario a la vista de 'registro de respuesta a foro'. En esta vista, dado la entrada de foro seleccionada, se debe (1) mostrar las respustas dadas hasta el momento, y (2), debe permtir registrar una nueva respuesta.	
-	4. Ambas vistas se basarán en el ManagedBean de sesión 'RegistroForosBean', el cual -a su vez- hace uso de los 'ServiciosForos'.
+	1. Se debe completar la implementación de las pruebas de SÓLO aquellas pruebas asociadas al alcance del ejercicio y hacer los ajustes necesarios en caso de encontrar defectos en la implementación de 'ServiciosAlquilerItemsStub'. Específicamente lo requerido es:
+		* Registro cliente.
+		* Registro alquiler.
+		* Cálculo de multa de devolución.
+	2. a lo requerido para este caso (NO ESB, y hacer los ajustes necesarios en caso de encontrar un defecto en la implementación de 'ServiciosForoStub'.
+	2. La vista de 'registro de clientes' debe (1) mostrar el listado de los clientes registrados hasta el momento (con la opción de selecciar de uno de éstos), y (2) debe mostrar los campos para poder registrar un nuevo cliente (con su respectivo botón de registro). Cuando se registre un nuevo cliente, se debería automáticamente mostrar el nuevo cliente en la parte superior. 
+	3. Cuando se seleccione uno de los usuarios ya creados, se debe redirigir al usuario a la vista de 'registro de alquileres'. En esta vista, dado el cliente seleccionado, se debe (1) mostrar los items que no ha regresado, junto con el valor de la multa total asociada a los mismos a la fecha (fecha del sistema), y (2), debe permtir registrar un nuevo alquiler ingresando el código del ítem (asumiendo que éste se ingresará con un lector de código de barras), el número de días del alquiler, y mostrando el costo del alquiler antes de su confirmación.
+	4. Ambas vistas se basarán en el ManagedBean de sesión 'AlquilerItemsBean', el cual -a su vez- hace uso de los 'ServiciosAlquilerItems'.
 	5. El desarrollo de ambas vistas debe quedar distribuido entre los dos desarrolladores de la siguiente manera:
 	
-		* Desarrollador 1: Vista registro entrada foro.
-		* Desarrollador 2: Vista registro respuesta a foro.
-		* Desarrollador 1 y 2: ManagedBean 'RegistroForosBean'.
+		* Desarrollador 1: Vista registro de cliente.
+		* Desarrollador 2: Vista registro de alquiler.
+		* Desarrollador 1 y 2: ManagedBean 'RegistroAlqulerBean'.
 
 	Nota. Para ver cómo navegar entre vistas con JSF revise [este enlace.](http://www.tutorialspoint.com/jsf/jsf_page_navigation.htm)
 	
