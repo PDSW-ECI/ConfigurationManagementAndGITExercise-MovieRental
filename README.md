@@ -97,8 +97,8 @@ git push URL_REPOSITORIO master
 	
 	__Autor 2:__
 
-	* En la clase de pruebas AlquilerTest defina -en comentarios- las clases de equivalencia para las pruebas del método de registro nuevo alquiler.
-	* Implementar una prueba de una de dichas clases de equivalencia.
+	* En la clase de pruebas AlquilerTest agregue -en comentarios- más clases de equivalencia/casos de frontera para las pruebas del método de registro nuevo alquiler.
+	* Implementar una prueba adicional (ya hay dos implementadas) de una de dichas clases de equivalencia.
 	* Commit
 	* Push a GitHub
 
