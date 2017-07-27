@@ -77,14 +77,14 @@ git push URL_REPOSITORIO master
 
 	
 	```
-git pull --rebase URL_REPOSITORIO master
-```
+		git pull --rebase URL_REPOSITORIO master
+	```
 	
 	Al final, todos rectificar que quedan con la última versión respecto al repositorio de GitHUB:
 	
 	```
-git pull URL_REPOSITORIO master
-```
+		git pull URL_REPOSITORIO master
+	```
 
 10. De nuevo, en dos computadores diferentes:
 
