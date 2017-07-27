@@ -42,7 +42,7 @@ git push URL_REPOSITORIO master
                     <path>/</path>
                 </configuration>
             </plugin>
-	```
+		```
 
 	* Commit
 	* Push a GitHub
