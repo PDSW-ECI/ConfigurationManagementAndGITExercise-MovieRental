@@ -23,7 +23,7 @@ git push URL_REPOSITORIO master
 	
 	Clonar el proyecto localmente:
 	
-		```bash
+	```bash
 		git clone
 	```
 	
