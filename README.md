@@ -1,8 +1,8 @@
-###Escuela Colombiana de Ingeniería
-###Procesos de desarrollo de software – PDSW
+### Escuela Colombiana de Ingeniería
+### Procesos de desarrollo de software – PDSW
 
 Administración de la configuración – Control de versiones con GIT
-#Trabajo en parejas
+# Trabajo en parejas
 
 1. Descargue y descomprima el proyecto suministrado (ProyectoBase.zip).
 2. Cree una cuenta (para cada integrante del grupo) en GitHUB. En una de las dos cuentas, cree un nuevo repositorio. Invite al usuario de su compañero como colaborador de dicho proyecto.
