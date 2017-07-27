@@ -179,9 +179,9 @@ En este caso, probablemente no sea posible hacer una ‘mezcla’ automática de
 	1. En los 'logs' de GitHUB debe quedar evidencia de los 'commit' realizados por cada autor, y en computadores diferentes (esto es verificable). Para esto, no olvide configurar su usuario antes de hacer los commits:
 
 		```
-		$ git config --global user.name "John Doe"
-		$ git config --global user.email johndoe@example.com
-	```
+			$ git config --global user.name "John Doe"
+			$ git config --global user.email johndoe@example.com
+		```
 	2. Subir en el espacio de moodle un archivo de texto que tenga los integrantes, qué rol se asignó a cada uno (desarrollador 1/ desarrollador 2) y la URL del repositorio en GitHUB.
 
 
