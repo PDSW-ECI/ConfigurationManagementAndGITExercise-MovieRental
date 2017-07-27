@@ -76,15 +76,15 @@ git push URL_REPOSITORIO master
 	Si para alguno no es posible (por consistencia) hacer el ‘push’, haga un pull a la rama ‘master’ del repositorio en GitHub con ‘rebase’:
 
 	
-		```
-			git pull --rebase URL_REPOSITORIO master
-		```
+	```
+		git pull --rebase URL_REPOSITORIO master
+	```
 	
 	Al final, todos rectificar que quedan con la última versión respecto al repositorio de GitHUB:
 	
-		```
-			git pull URL_REPOSITORIO master
-		```
+	```
+		git pull URL_REPOSITORIO master
+	```
 
 10. De nuevo, en dos computadores diferentes:
 
