@@ -140,21 +140,21 @@ En este caso, probablemente no sea posible hacer una ‘mezcla’ automática de
 	De manera que la acción de --rebase queda inconclusa hasta que se corrijan los conflictos generados. Para este caso, edite el archivo, y ajuste el conflicto, el cual se presenta con el siguiente formato:
 
 	```
-<<<<<<< HEAD (commit más reciente del repositorio)
-	Cambio obtenido del respositorio externo 
-	Mediante el pull --rebase
-=======
-	Cambio del repositorio local que se intentó 
-	combinar con el cambio del repositorio externo.
->>>>>>> comentario del último commit
-```
+		<<<<<<< HEAD (commit más reciente del repositorio)
+			Cambio obtenido del respositorio externo 
+			Mediante el pull --rebase
+		=======
+			Cambio del repositorio local que se intentó 
+			combinar con el cambio del repositorio externo.
+		>>>>>>> comentario del último commit
+	```
 
 	Una vez generada una versión válida, agregue el cambio con:
 
 	```
-git add NombreDelArchivo.java
-git rebase --continue
-```
+		git add NombreDelArchivo.java
+		git rebase --continue
+	```
 
 	Y posteriormente, haga push a la nuevos cambios al repositorio de GitHUB con push. Al final, todos deben hacer un ‘pull’ para garantizar que estén trabajando sobre la última versión.
 
